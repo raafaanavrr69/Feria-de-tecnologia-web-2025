@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Web HTML</title>
+</head>
+<body>
+<header>
+    <h1>Feria de Tecnología Web 2025</h1>
+    <nav>
+        <ul>
+            <li><a href="#ponencias">Ponencias</a></li>
+            <li><a href="#programa">Programa</a></li>
+            <li><a href="#inscripcion">Inscripción</a></li>
+        </ul>
+</header>
+<main>
+    <section id="ponencias">
+        <h2>Ponencias destacadas</h2>
+        <article>
+            <h3>El Futuro del Desarrollo Web</h3>
+            <img src="https://www.overant.com/galeria/noticias/el-futuro-del-desarrollo-web-explorando-tendencias-y-tecnologias-emergentes-para-el-2024_71_1_845x515.webp" alt="Conexión de los humanos y los robots" width="400">
+            <p>Exploraremos las tendencias emergentes en el desarrollo web, incluyendo nuevas tecnologías y mejores prácticas.</p>
+        </article>
+        <article>
+            <h3>Diseño Responsivo y Accesibilidad</h3>
+            <img src="https://images.accessiblemadrid.com/news/images/597/diseno-responsive-web-accessible-madrid-accesibilidad-contenidos-accesibles-movilidad-reducida.jpg" alt="Diseño web accesible" width="400">
+            <p>Aprende cómo crear sitios web que sean accesibles para todos los usuarios, independientemente de sus habilidades o dispositivos.</p>
+        </article>
+        <article>
+            <h3>Optimización de Rendimiento Web</h3>
+            <img src="https://pandorafms.com/blog/wp-content/uploads/2017/12/Optimizacion-de-rendimiento-web-featured.png" alt="Optimización de velocidad web" width="400">
+            <p>Descubre técnicas para mejorar la velocidad y el rendimiento de tus sitios web, asegurando una mejor experiencia para los usuarios.</p>
+        </article>
+    </section>
+    <section id="programa">
+        <h2>Programa del Evento</h2>
+        <table border="3">
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Ponencia</th>
+                    <th>Ponente</th>
+                    <th>Sala</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td>El Futuro del Desarrollo Web</td>
+                    <td>María López</td>
+                    <td>Sala A</td>
+                </tr>
+                <tr>
+                    <td>11:30 - 12:30</td>
+                    <td>Diseño Responsivo y Accesibilidad</td>
+                    <td>Carlos Pérez</td>
+                    <td>Sala B</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 14:00</td>
+                    <td>Optimización de Rendimiento Web</td>
+                    <td>Ana García</td>
+                    <td>Sala C</td>
+                </tr>
+                <tr>
+                    <td>15:00 - 16:00</td>
+                    <td>Seguridad en Aplicaciones Web</td>
+                    <td>Javier Martínez</td>
+                    <td>Sala D</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="inscripcion">
+        <h2>Formulario de Inscripción</h2>
+        <form action="procesar.php" method="post">
+            <label for="nombre">Nombre Completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="telefono">Número de Teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono"><br><br>
+            <label for="fecha-nacimiento">Fecha de nacimiento</label><br>
+            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento"><br><br>
+            <fieldset>
+            <legend>Tipo de entrada:</legend>
+            <label for="entrada-general">Entrada General</label>
+            <input type="radio" id="entrada-general" name="tipo-entrada" value="general" required>
+            <label for="entrada-estudiante">Entrada Estudiante</label>
+            <input type="radio" id="entrada-estudiante" name="tipo-entrada" value="estudiante" required>
+            <label for="entrada-vip">Entrada VIP</label>
+            <input type="radio" id="entrada-vip" name="tipo-entrada" value="vip" required><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>Talleres a los que desea asistir:</legend>
+            <input type="checkbox" id="taller-html" name="talleres-asistir" value="html">
+            <label for="taller-html">Taller de HTML</label><br>
+            <input type="checkbox" id="taller-css" name="talleres-asistir" value="css">
+            <label for="taller-css">Taller de CSS</label><br>
+            <input type="checkbox" id="taller-js" name="talleres-asistir" value="js">
+            <label for="taller-js">Taller de JavaScript</label><br><br>
+        </fieldset>
+        </form>
+        <br>
+    <label for="ciudad-pais">Ciudad y País:</label>
+        <select id="ciudad-pais" name="ciudad-pais" required>
+        <option value="ciudad-pais">Seleccione la ciudad y país</option>
+        <option value="madrid-espana">Madrid, España</option>
+        <option value="ciudad-mexico-mexico">Ciudad de México, México</option>
+        <option value="buenos-aires-argentina">Buenos Aires, Argentina</option>
+        <option value="bogota-colombia">Bogotá, Colombia</option>
+    </select>
+    <br><br>
+    <textarea id="comentarios" name="comentarios" rows="4" cols="50" placeholder="Comentarios adicionales"></textarea>
+    <br><br>
+    <label for="terminos-condiciones">Aceptar terminos y condiciones</label>
+    <input type="checkbox" id="terminos-condiciones" name="terminos-condiciones" required>
+    <br><br>
+    <button type="submit">Enviar Inscripción</button>
+    <button type="reset">Restablecer</button>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 Feria de Tecnología Web.</p>
+    <a href="https://github.com/raafaanavrr69/Portfolio">Ver codigo en GitHub</a>
+</footer>
+</body>
+</html>
